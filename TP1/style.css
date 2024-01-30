@@ -34,6 +34,9 @@ body {
 header {
 	background-color: #0099ee;
 	padding: 10px 0;
+	position: fixed;
+	width: 100%;
+	z-index: 9;
 }
 
 .logo-link {
@@ -82,4 +85,81 @@ header nav a {
 	left: 0;
 	width: 100%;
 	text-align: center;
+}
+
+/* SECTION 2 */
+
+.section2 {
+	background-color: #008cda;
+}
+
+.section2 .container > h1 {
+	text-align: center;
+}
+
+.benefit {
+	float: left;
+	padding: 2em;
+	text-align: center;
+	width: 25%;
+}
+
+/* SECTION 3 */
+
+.section3 {
+	background-color: #006ba6;
+	padding: 20px;
+}
+
+.section3 .container > h1 {
+	text-align: center;
+}
+
+.offers-container {
+	margin: auto;
+	width: 70%;
+	padding-bottom: 100px;
+}
+
+.offer {
+	float: left;
+	width: 48%;
+}
+
+.offer:nth-child(1) {
+	margin-right: 4%;
+}
+
+.section3 footer {
+	text-align: center;
+}
+
+/* Footer */
+
+main + footer {
+	background-color: #0081c8;
+}
+
+main + footer nav {
+	float: left;
+}
+
+main + footer nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+main + footer nav li {
+	float: left;
+}
+
+main + footer nav a {
+	display: inline-block;
+	padding: 1em;
+}
+
+main + footer small {
+	float: right;
+	right: 0;
 }
