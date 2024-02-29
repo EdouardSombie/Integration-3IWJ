@@ -1,22 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
 	box-sizing: border-box;
 }
 
-.clearfix::before {
-	content: "";
-	display: table;
+:root {
+	--green: #1db954;
+	--light-green: #1ed760;
+	--blue: #1e3264;
+	--light-blue: #2a468d;
+	--white: #fff;
+	--grey: grey;
+	--light-grey: rgb(177, 172, 172);
+	--very-light-grey: 
+	--black: black;
 }
 
-.clearfix::after {
-	content: "";
-	clear: both;
-	display: table;
+body {
+	font-family: "Montserrat", sans-serif;
+	margin: 0;
+	color: #000;
+	background-color: #fff;
 }
 
-.vertically-centered {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+a {
+	color: inherit;
 }
 
 .container {
@@ -25,22 +33,73 @@
 	position: relative;
 }
 
-body {
-	margin: 0;
+/* Composant cta-button */
+.cta-button {
+	color: var(--white);
+	background-color: var(--grey);
+	text-transform: uppercase;
+	display: inline-block;
+	padding: 1em 3em;
+	text-decoration: none;
+	font-weight: 700;
+	border-radius: 800px;
+	transition: background-color 0.3s;
+	border: solid thin transparent;
+	&:hover{
+		background-color: var(--light-grey);
+	}
 }
+
+/* Modifiers de couleurs */
+.cta-button--white{
+	background-color: var(--white);
+	color: var(--green);
+	border-color: var(--green);
+	&:hover{
+		background-color: var(--light-green);
+		border-color: var(--light-green);
+		color: var(--white);
+	}
+}
+
+.cta-button--green{
+	background-color: var(--green);
+	border-color: var(--green);
+	&:hover{
+		background-color: var(--light-green);
+	border-color: var(--light-green);
+	}
+}
+
+.cta-button--blue{
+	background-color: var(--blue);
+	&:hover{
+		background-color: var(--light-blue);
+	}
+}
+
+/* 
+.cta-button:hover {
+	background-color: var(--light-grey);
+} */
 
 /* HEADER */
 
 header {
-	background-color: #0099ee;
 	padding: 10px 0;
 	position: fixed;
 	width: 100%;
 	z-index: 9;
+	color: var(--white);
+}
+
+header .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .logo-link {
-	float: left;
 	line-height: 0;
 }
 
@@ -48,23 +107,18 @@ header {
 	width: 140px;
 }
 
-header nav {
-	float: right;
-}
-
 header nav ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-}
-
-header nav li {
-	float: left;
+	display: flex;
+	align-items: center;
 }
 
 header nav a {
 	padding: 1rem;
 	display: inline-block;
+	text-decoration: none;
 }
 
 /* SECTION 1 */
@@ -73,18 +127,36 @@ header nav a {
 	background-color: #0078bb;
 	height: 640px;
 	padding-bottom: 20px;
+	color: var(--white);
+}
+
+.section1 h1 {
+	font-size: 6rem;
+	font-weight: 800;
+	margin: 0;
+}
+
+.section1 h2 {
+	font-size: 1.875rem;
 }
 
 .section1 .container {
 	height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.section1 .container > div {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
 }
 
 .section1 footer {
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
 	text-align: center;
+	flex-shrink: 0;
 }
 
 /* SECTION 2 */
@@ -93,12 +165,20 @@ header nav a {
 	background-color: #008cda;
 }
 
+.section2 .container {
+	display: flex;
+	flex-direction: column;
+}
+
 .section2 .container > h1 {
 	text-align: center;
 }
 
+.benefit-container {
+	display: flex;
+}
+
 .benefit {
-	float: left;
 	padding: 2em;
 	text-align: center;
 	width: 25%;
@@ -111,6 +191,11 @@ header nav a {
 	padding: 20px;
 }
 
+.section3 .container {
+	display: flex;
+	flex-direction: column;
+}
+
 .section3 .container > h1 {
 	text-align: center;
 }
@@ -119,15 +204,12 @@ header nav a {
 	margin: auto;
 	width: 70%;
 	padding-bottom: 100px;
+	display: flex;
+	justify-content: space-between;
 }
 
 .offer {
-	float: left;
 	width: 48%;
-}
-
-.offer:nth-child(1) {
-	margin-right: 4%;
 }
 
 .section3 footer {
@@ -140,26 +222,20 @@ main + footer {
 	background-color: #0081c8;
 }
 
-main + footer nav {
-	float: left;
+main + footer .container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 main + footer nav ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
-}
-
-main + footer nav li {
-	float: left;
+	display: flex;
 }
 
 main + footer nav a {
 	display: inline-block;
 	padding: 1em;
-}
-
-main + footer small {
-	float: right;
-	right: 0;
 }
