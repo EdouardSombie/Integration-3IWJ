@@ -6,7 +6,7 @@
 		<title>Spotify</title>
 	</head>
 	<body>
-		<header>
+		<header id="site-header">
 			<div class="container">
 				<a href="#" class="logo-link">
 					<img src="images/logo.svg" alt="Spotify" />
@@ -39,7 +39,7 @@
 			<section class="section1">
 				<div class="container">
 					<div>
-						<h1>Obtenez 3 mois pour 0,99 €</h1>
+						<h1>Obtenez 3 mois pour 0,99&nbsp;€</h1>
 						<h2>Seulement 9,99 € /par mois ensuite. Annulez à tout moment.</h2>
 						<a href="#" class="cta-button cta-button--blue"
 							>Démarrer Spotify Premium</a
@@ -90,11 +90,11 @@
 							<h2>0,00 € <small>/ mois</small></h2>
 							<ul>
 								<li>Lecture aléatoire</li>
-								<li>Sans interruptions</li>
-								<li>Zappez les titres sans limite</li>
-								<li>Écouter hors connexion</li>
-								<li>Écoutez les titres de votre choix</li>
-								<li>Son de qualité supérieure</li>
+								<li class="disabled">Sans interruptions</li>
+								<li class="disabled">Zappez les titres sans limite</li>
+								<li class="disabled">Écouter hors connexion</li>
+								<li class="disabled">Écoutez les titres de votre choix</li>
+								<li class="disabled">Son de qualité supérieure</li>
 							</ul>
 							<a href="#" class="cta-button cta-button--white">Démarrer</a>
 						</article>
@@ -142,5 +142,17 @@
 				<small>© 2024 Spotify AB</small>
 			</div>
 		</footer>
+		<script>
+			// ajouter un ecouteur de scroll sur la fenetre du navigateur
+			window.addEventListener("scroll", function () {
+				console.log(window.scrollY);
+				if (window.scrollY > 0) {
+					document.getElementById("site-header").classList.add("sticky");
+				} else {
+					document.getElementById("site-header").classList.remove("sticky");
+				}
+			});
+			// > mesurer le niveau de scroll de la window > en fonction, ajouter ou retirer la classe .sticky du header
+		</script>
 	</body>
 </html>
