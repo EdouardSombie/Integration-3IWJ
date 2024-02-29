@@ -1,0 +1,13 @@
+// Colors
+$textColor: #000;
+
+$blue: blue;
+$white: #fff;
+
+:root {
+	--text-color: #{$textColor};
+	--primary: var(--blue);
+
+	--blue: #{$blue};
+	--white: #{$white};
+}

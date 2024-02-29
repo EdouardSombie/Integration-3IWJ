@@ -1,0 +1,24 @@
+:root {
+  --text-color: #000;
+  --primary: var(--blue);
+  --blue: blue;
+  --white: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--text-color);
+}
+
+.button {
+  background-color: var(--white);
+  color: var(--text-color);
+}
+.button--primary {
+  background-color: var(--primary);
+}
+
+/*# sourceMappingURL=main.css.map */
