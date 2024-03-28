@@ -1,0 +1,55 @@
+.card {
+	// reset
+	display: inline-block;
+	overflow: hidden;
+
+	// var locales
+	--width: #{rem(320)};
+	--padding: #{rem(20)};
+	--imageHeight: #{rem(200)};
+
+	width: var(--width);
+	padding: var(--padding);
+
+	// Ces deux propriétés ne sont pas concernées par les modificateurs
+	border-radius: var(--main-radius);
+	border: solid thin var(--light-grey);
+
+	img {
+		// reset
+		display: block; // pour éviter qu'une line-height s'ajoute à la height
+		object-fit: cover;
+		height: var(--imageHeight);
+		width: var(--width);
+		margin: calc(-1 * var(--padding)) calc(-1 * var(--padding)) 0; // margin négatif pour occuper la zone de padding du parent
+	}
+
+	h1 {
+		margin: rem(20) 0 0;
+	}
+
+	&--full {
+		position: relative;
+		padding-top: var(--imageHeight);
+		img {
+			--imageHeight: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			margin: 0;
+		}
+		*:not(img) {
+			position: relative;
+			z-index: 1;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background: linear-gradient(to top, var(--white) 25%, transparent);
+		}
+	}
+}

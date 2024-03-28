@@ -1,13 +1,23 @@
 // Colors
 $textColor: #000;
-
-$blue: blue;
+$blue: #0d6efd;
 $white: #fff;
+$grey: #6c757d;
+$red: #dc3545;
 
 :root {
 	--text-color: #{$textColor};
 	--primary: var(--blue);
+	--secondary: var(--grey);
+	--danger: var(--red);
 
 	--blue: #{$blue};
 	--white: #{$white};
+	--grey: #{$grey};
+	--red: #{$red};
+	--light-grey: #ccc;
+
+	--main-font: #{$font1};
+
+	--main-radius: #{rem(6)};
 }

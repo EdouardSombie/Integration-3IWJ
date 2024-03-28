@@ -1,7 +1,48 @@
 .button {
-	background-color: var(--white);
+	// reset
+	display: inline-block;
+	line-height: 1;
+	text-decoration: none;
+	border: none;
+	cursor: pointer;
+
+	// Variables du composant
+	--padding: #{rem(10)} #{rem(16)};
+	--fontSize: 1rem;
+
+	// Utilisation de ces variables
+	font-size: var(--fontSize);
+	padding: var(--padding);
+	background-color: var(--bg-color);
 	color: var(--text-color);
+	border-radius: var(--main-radius);
+
+	font-weight: 600; // Cette propriété n'est pas appelée à varier
+
+	// Modificateurs de couleur (nlles valeurs pour les variables locales)
 	&--primary {
-		background-color: var(--primary);
+		--bg-color: var(--primary);
+		--text-color: var(--white);
+	}
+
+	&--secondary {
+		--bg-color: var(--secondary);
+		--text-color: var(--white);
+	}
+
+	&--danger {
+		--bg-color: var(--danger);
+		--text-color: var(--white);
+	}
+
+	// Modificateurs de taille (nlles valeurs pour les variables locales)
+
+	&--lg {
+		--padding: #{rem(16)} #{rem(24)};
+	}
+
+	&--sm {
+		--fontSize: #{rem(14)};
+		--padding: #{rem(8)} #{rem(12)};
 	}
 }
