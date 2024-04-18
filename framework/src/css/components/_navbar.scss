@@ -1,0 +1,13 @@
+.navbar {
+	.container {
+		@include flexbox(row, nowrap, space-between, center, rem(30));
+	}
+	ul {
+		@include resetList;
+		@include flexbox(row, nowrap, flex-start, center, rem(18));
+		flex-grow: 1; // prend toute la place disponible
+	}
+	a {
+		color: inherit;
+	}
+}
