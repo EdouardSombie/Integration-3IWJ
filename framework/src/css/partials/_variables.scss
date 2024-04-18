@@ -1,23 +1,44 @@
+@use "sass:color";
+
 // Colors
 $textColor: #000;
-$blue: #0d6efd;
-$white: #fff;
-$grey: #6c757d;
-$red: #dc3545;
+$textColor: #212529;
+// $blue: #0d6efd;
+// $white: #fff;
+// $grey: #6c757d;
+// $red: #dc3545;
+
+$colors: (
+	"black": #000,
+	"blue": #0d6efd,
+	"white": #fff,
+	"grey": #6c757d,
+	"red": #dc3545,
+);
 
 :root {
-	--text-color: #{$textColor};
+	@each $name, $value in $colors {
+		--#{$name}: #{$value};
+		--#{$name}-hover: #{color.adjust($value, $lightness: -20%)};
+	}
+
+	--text-color: var(--black);
 	--primary: var(--blue);
 	--secondary: var(--grey);
 	--danger: var(--red);
 
-	--blue: #{$blue};
-	--white: #{$white};
-	--grey: #{$grey};
-	--red: #{$red};
-	--light-grey: #ccc;
+	--primary-hover: var(--blue-hover);
+	--secondary-hover: var(--grey-hover);
+	--danger-hover: var(--red-hover);
 
 	--main-font: #{$font1};
-
 	--main-radius: #{rem(6)};
+
+	// --blue: #{$blue};
+	// --white: #{$white};
+	// --grey: #{$grey};
+	// --red: #{$red};
+	// --light-grey: #ccc;
+	// --main-font: #{$font1};
+	// --main-radius: #{rem(6)};
 }
