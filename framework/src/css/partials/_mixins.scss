@@ -18,3 +18,10 @@
 	margin: 0;
 	padding: 0;
 }
+
+@mixin resetButton {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+}

@@ -13,6 +13,7 @@
 				.demo-content {
 					background-color: green;
 					height: 2rem;
+					margin-bottom: 1rem;
 				}
 			}
 		</style>
@@ -82,24 +83,27 @@
 				<nav class="navbar">
 					<div class="container">
 						<a href="#" class="navbar__title">Navbar</a>
-						<ul>
-							<li>
-								<a href="#">Home</a>
-							</li>
-							<li>
-								<a href="#">Features</a>
-							</li>
-							<li>
-								<a href="#">Pricing</a>
-							</li>
-							<li>
-								<a href="#">Disabled</a>
-							</li>
-						</ul>
-						<form>
-							<input type="text" placeholder="Search" />
-							<button class="button button--outline">Search</button>
-						</form>
+						<button class="navbar__toggle"><span></span></button>
+						<div class="navbar__toggle-content">
+							<ul>
+								<li>
+									<a href="#" class="navbar__item">Home</a>
+								</li>
+								<li>
+									<a href="#" class="navbar__item">Features</a>
+								</li>
+								<li>
+									<a href="#" class="navbar__item">Pricing</a>
+								</li>
+								<li>
+									<a href="#" class="navbar__item">Disabled</a>
+								</li>
+							</ul>
+							<form>
+								<input type="text" placeholder="Search" />
+								<button class="button button--outline">Search</button>
+							</form>
+						</div>
 					</div>
 				</nav>
 			</section>
@@ -107,13 +111,13 @@
 				<h1>.grid</h1>
 				<div class="grid">
 					<div class="row">
-						<div class="col-6">
+						<div class="col-6 col-lg-2">
 							<div class="demo-content"></div>
 						</div>
-						<div class="col-6">
+						<div class="col-6 col-lg-2">
 							<div class="demo-content"></div>
 						</div>
-						<div class="col-12">
+						<div class="col-12 col-lg-8">
 							<div class="demo-content"></div>
 						</div>
 					</div>

@@ -8,6 +8,13 @@ $textColor: #212529;
 // $grey: #6c757d;
 // $red: #dc3545;
 
+$breakpoints: (
+	"sm": 768px,
+	"md": 960px,
+	"lg": 1180px,
+	"xl": 1420px,
+);
+
 $colors: (
 	"black": #000,
 	"blue": #0d6efd,
