@@ -428,4 +428,12 @@ input {
   color: inherit;
 }
 
+.grid {
+  overflow: hidden;
+}
+.grid .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 /*# sourceMappingURL=main.css.map */

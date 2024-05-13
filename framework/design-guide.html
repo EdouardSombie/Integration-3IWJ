@@ -9,6 +9,12 @@
 			main {
 				padding: 0 1rem;
 			}
+			.row:nth-child(1) {
+				.demo-content {
+					background-color: green;
+					height: 2rem;
+				}
+			}
 		</style>
 	</head>
 	<body>
@@ -96,6 +102,22 @@
 						</form>
 					</div>
 				</nav>
+			</section>
+			<section>
+				<h1>.grid</h1>
+				<div class="grid">
+					<div class="row">
+						<div class="col-6">
+							<div class="demo-content"></div>
+						</div>
+						<div class="col-6">
+							<div class="demo-content"></div>
+						</div>
+						<div class="col-12">
+							<div class="demo-content"></div>
+						</div>
+					</div>
+				</div>
 			</section>
 		</main>
 	</body>
