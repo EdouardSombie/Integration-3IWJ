@@ -1,0 +1,28 @@
+$colNumber: 12;
+$gutter: 2rem;
+
+.grid {
+	overflow: hidden;
+	.row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 calc($gutter / -2);
+	}
+	@for $i from 1 through $colNumber {
+		.col-#{$i} {
+			padding: 0 calc($gutter / 2);
+			width: calc((100% / $colNumber) * $i);
+		}
+	}
+
+	@each $name, $size in $breakpoints {
+		@media screen and (min-width: $size) {
+			@for $i from 1 through $colNumber {
+				.col-#{$name}-#{$i} {
+					padding: 0 calc($gutter / 2);
+					width: calc((100% / $colNumber) * $i);
+				}
+			}
+		}
+	}
+}

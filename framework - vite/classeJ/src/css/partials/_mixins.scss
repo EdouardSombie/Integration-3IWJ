@@ -1,0 +1,27 @@
+@mixin background-cover {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+@mixin flexbox($direction, $wrap, $justify, $align, $gap: 0) {
+	display: flex;
+	flex-direction: $direction;
+	flex-wrap: $wrap;
+	justify-content: $justify;
+	align-items: $align;
+	gap: $gap;
+}
+
+@mixin resetList {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+@mixin resetButton {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+}

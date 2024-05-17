@@ -1,0 +1,51 @@
+@use "sass:color";
+
+// Colors
+$textColor: #000;
+$textColor: #212529;
+// $blue: #0d6efd;
+// $white: #fff;
+// $grey: #6c757d;
+// $red: #dc3545;
+
+$breakpoints: (
+	"sm": 768px,
+	"md": 960px,
+	"lg": 1180px,
+	"xl": 1420px,
+);
+
+$colors: (
+	"black": #000,
+	"blue": #0d6efd,
+	"white": #fff,
+	"grey": #6c757d,
+	"red": #dc3545,
+);
+
+:root {
+	@each $name, $value in $colors {
+		--#{$name}: #{$value};
+		--#{$name}-hover: #{color.adjust($value, $lightness: -20%)};
+	}
+
+	--text-color: var(--black);
+	--primary: var(--blue);
+	--secondary: var(--grey);
+	--danger: var(--red);
+
+	--primary-hover: var(--blue-hover);
+	--secondary-hover: var(--grey-hover);
+	--danger-hover: var(--red-hover);
+
+	--main-font: #{$font1};
+	--main-radius: #{rem(6)};
+
+	// --blue: #{$blue};
+	// --white: #{$white};
+	// --grey: #{$grey};
+	// --red: #{$red};
+	// --light-grey: #ccc;
+	// --main-font: #{$font1};
+	// --main-radius: #{rem(6)};
+}

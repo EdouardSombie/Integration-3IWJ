@@ -1,0 +1,30 @@
+@use "sass:color"; // importer le module natif color
+
+.banner {
+	aspect-ratio: 100/42;
+	@include background-cover;
+	&--text {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: color.adjust($textColor, $alpha: -0.6);
+		}
+		p {
+			position: relative;
+			text-align: center;
+			max-width: 70%;
+			font-weight: bold;
+			color: var(--white);
+			font-size: rem(48);
+			line-height: 1.25;
+		}
+	}
+}

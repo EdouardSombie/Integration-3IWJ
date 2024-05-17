@@ -1,0 +1,100 @@
+// import du module map (natif)
+@use "sass:map";
+
+.navbar {
+	.container {
+		@include flexbox(row, wrap, space-between, center, rem(30));
+	}
+	a {
+		color: inherit;
+	}
+	ul {
+		@include resetList;
+		@include flexbox(column, nowrap, flex-start, flex-start, rem(10));
+		flex-grow: 1; // prend toute la place disponible
+		@media screen and (min-width: map.get($breakpoints, "lg")) {
+			@include flexbox(row, nowrap, flex-start, center, rem(18));
+		}
+	}
+	&__item {
+		color: inherit;
+		font-weight: 500;
+		font-size: rem(18);
+	}
+	form {
+		@include flexbox(row, nowrap, flex-start, stretch, rem(10));
+	}
+	&__toggle-content {
+		width: 100%;
+		max-height: 0;
+		overflow: hidden;
+		@include flexbox(column, nowrap, flex-start, flex-start, rem(20));
+		transition: all 0.3s;
+		@media screen and (min-width: map.get($breakpoints, "lg")) {
+			width: auto;
+			@include flexbox(row, nowrap, flex-start, center, rem(20));
+			flex-grow: 1;
+			max-height: none;
+		}
+	}
+	&__title {
+		font-size: rem(22);
+		line-height: 1;
+	}
+
+	&__toggle {
+		@include resetButton;
+		display: inline-block;
+		width: rem(16);
+		height: rem(16);
+		position: relative;
+		span {
+			display: block;
+			background-color: var(--text-color);
+			height: rem(3);
+			transition: all 0.3s;
+		}
+		&::before,
+		&::after {
+			content: "";
+			background-color: var(--text-color);
+			height: rem(3);
+			width: 100%;
+			position: absolute;
+		}
+
+		&::before {
+			top: 0;
+			left: 0;
+			transition: all 0.3s;
+		}
+
+		&::after {
+			bottom: 0;
+			left: 0;
+			transition: all 0.3s;
+		}
+
+		&.active {
+			span {
+				opacity: 0;
+			}
+			&::before {
+				top: 50%;
+				left: 50%;
+				transform: translateY(-50%) translateX(-50%) rotate(45deg);
+				transform-origin: center;
+			}
+			&::after {
+				top: 50%;
+				left: 50%;
+				transform: translateY(-50%) translateX(-50%) rotate(-45deg);
+				transform-origin: center;
+			}
+		}
+
+		@media screen and (min-width: map.get($breakpoints, "lg")) {
+			display: none;
+		}
+	}
+}

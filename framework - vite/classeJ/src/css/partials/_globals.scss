@@ -1,0 +1,24 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	color: var(--text-color);
+	font-family: var(--main-font);
+}
+
+p {
+	line-height: 1.5;
+}
+
+a {
+	text-decoration: none;
+	color: var(--blue);
+}
+
+input {
+	border-radius: var(--main-radius);
+	border: solid thin var(--grey);
+	padding: #{rem(10)} #{rem(16)};
+	line-height: 1;
+}

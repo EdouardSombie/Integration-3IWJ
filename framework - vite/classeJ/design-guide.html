@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="dist/main.css" />
+		<title>Design guide</title>
+		<style>
+			main {
+				padding: 0 1rem;
+			}
+			.row:nth-child(1) {
+				.demo-content {
+					background-color: green;
+					height: 2rem;
+					margin-bottom: 1rem;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<main>
+			<section>
+				<h1>.button</h1>
+				<hr />
+				<p>
+					<a href="#" class="button button--primary button--lg">Button</a>
+					<button class="button button--primary">Button</button>
+					<a href="#" class="button button--primary button--sm">Button</a>
+				</p>
+				<p>
+					<a href="#" class="button button--secondary button--lg">Button</a>
+					<button class="button button--secondary">Button</button>
+					<a href="#" class="button button--secondary button--sm">Button</a>
+				</p>
+				<p>
+					<a href="#" class="button button--danger button--lg">Button</a>
+					<button class="button button--danger">Button</button>
+					<a href="#" class="button button--danger button--sm">Button</a>
+				</p>
+			</section>
+			<section>
+				<h1>.card</h1>
+				<hr />
+				<article class="card">
+					<img src="images/image6.jpg" alt="totoro!!" />
+					<h1>Card title</h1>
+					<p>
+						Some quick example text to build on the card title and make up the
+						bulk of the card's content.
+					</p>
+					<a href="#" class="button button--primary button--sm">Button</a>
+				</article>
+
+				<article class="card card--full">
+					<img src="images/image6.jpg" alt="totoro!!" />
+					<h1>Card title</h1>
+					<p>
+						Some quick example text to build on the card title and make up the
+						bulk of the card's content.
+					</p>
+					<a href="#" class="button button--primary button--sm">Button</a>
+				</article>
+			</section>
+			<section>
+				<h1>.banner</h1>
+				<hr />
+				<div
+					class="banner"
+					style="background-image: url('images/fond.jpg')"></div>
+				<br />
+				<div
+					class="banner banner--text"
+					style="background-image: url('images/fond.jpg')">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras
+						ullamcorper nulla a ipsum imperdiet, ac porttitor dui sagittis.
+					</p>
+				</div>
+			</section>
+			<section>
+				<h1>.navbar</h1>
+				<nav class="navbar">
+					<div class="container">
+						<a href="#" class="navbar__title">Navbar</a>
+						<button class="navbar__toggle"><span></span></button>
+						<div class="navbar__toggle-content">
+							<ul>
+								<li>
+									<a href="#" class="navbar__item">Home</a>
+								</li>
+								<li>
+									<a href="#" class="navbar__item">Features</a>
+								</li>
+								<li>
+									<a href="#" class="navbar__item">Pricing</a>
+								</li>
+								<li>
+									<a href="#" class="navbar__item">Disabled</a>
+								</li>
+							</ul>
+							<form>
+								<input type="text" placeholder="Search" />
+								<button class="button button--outline">Search</button>
+							</form>
+						</div>
+					</div>
+				</nav>
+			</section>
+			<section>
+				<h1>.grid</h1>
+				<div class="grid">
+					<div class="row">
+						<div class="col-6 col-lg-2">
+							<div class="demo-content"></div>
+						</div>
+						<div class="col-6 col-lg-2">
+							<div class="demo-content"></div>
+						</div>
+						<div class="col-12 col-lg-8">
+							<div class="demo-content"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
